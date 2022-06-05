@@ -29,10 +29,9 @@ function Store(props: any) {
                     .then(data => fetch(data.evolution_chain.url)
                         .then(resp => resp.json())
                         .then(data => (pokemonEvolutionChain.push(data), setEvolutionChain(pokemonEvolutionChain)))
-                        .then(resp => (setLoading(false)))
-                    )
-                ))
-        ))
+                        .then(resp => setTimeout(() => {
+                            (setLoading(false))
+                        }, 10)))))))
     }, [])
 
     console.log(stats)
