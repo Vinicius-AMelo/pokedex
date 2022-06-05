@@ -4,34 +4,33 @@ import styles from '../../styles/Home.module.scss'
 
 const Home: NextPage = () => {
 
-  const [pokemon, setPokemon] = useState()
-  const [stats, setStats] = useState([])
-  const [evolutionChain, setEvolutionChain] = useState({})
+  const [stats, setStats] = useState()
+  const [evolutionChain, setEvolutionChain] = useState()
 
-  const chain: any = []
-  const pokemons = ['pikachu', 'charmander']
-  const pokemonos: any = []
+  const listOfPokemons = ['pikachu', 'charmander']
+
 
   useEffect(() => {
-    pokemons.map(pokemono => (
-      fetch(`https://pokeapi.co/api/v2/pokemon/${pokemono}/`)
+
+    const pokemonEvolutionChain: any = []
+    const pokemonStats: any = []
+    listOfPokemons.map(eachPokemon => (
+      fetch(`https://pokeapi.co/api/v2/pokemon/${eachPokemon}/`)
         .then(resp => resp.json())
-        .then(data => (
-          pokemonos.push(data),
-          fetch(data.species.url)
+        .then(data => (pokemonStats.push(data), fetch(data.species.url)
+          .then(resp => resp.json())
+          .then(data => fetch(data.evolution_chain.url)
             .then(resp => resp.json())
-            .then(data => fetch(data.evolution_chain.url)
-              .then(resp => resp.json())
-              .then(data => chain.push(data))
-            )
+            .then(data => pokemonEvolutionChain.push(data))
+          )
         ))
     ))
 
-    setEvolutionChain(chain)
-    setPokemon(pokemonos)
+    setEvolutionChain(pokemonEvolutionChain)
+    setStats(pokemonStats)
   }, [])
 
-  console.log(evolutionChain, pokemon)
+  console.log(evolutionChain, stats, 'a')
 
   return (
 
