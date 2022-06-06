@@ -1,60 +1,103 @@
 @import 'mixins';
 
 .Main_Screen {
-    background-color: #20202080;
-    color: #fff;
-    width: 600px;
+    background-color: #C00D0E;
+    width: 800px;
     height: 600px;
-    display: flex;
-    // align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    margin: 20px;
-    padding: 0 20px;
+    box-shadow: 10px 10px 0 10px #600405;
+    border: 3px solid #000;
+    padding: 50px;
 
-    @include mobile {
-        width: 100vw;
-        height: 1000px;
-    }
+    .Screen {
 
-    img {
-        align-self: center;
-        width: 200px;
-        height: 200px;
-        margin-bottom: 20px;
-    }
-
-    .lis {
+        background-color: #eee;
+        color: #202020;
+        width: 700px;
+        height: 500px;
         display: flex;
-        gap: 30px;
+        gap: 140px;
 
-        @include mobile {
+        padding: 10px 20px;
+        box-shadow: 0px 0px 0 20px #424242;
+        border: 5px solid #B0B0B0;
+        border-radius: 10px;
+
+        li {
+            font-size: 1.5rem;
+            display: flex;
             flex-direction: column;
         }
 
+        .Left_Screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // background-color: red;
 
-        ul {
-            width: 250px;
-            list-style: none;
+            ul {
+                width: 250px;
+                list-style: none;
+                border-radius: 10px;
+                background-color: #24272E;
+
+                li {
+
+                    color: #fff;
+                    padding: 5px 10px;
+
+
+                    b p {
+                        display: inline;
+                    }
+
+                    div {
+                        transition: all 1s;
+                        height: 25px;
+                        background-color: royalblue;
+                        border-radius: 5px;
+                        padding: 0 4px;
+
+                    }
+
+
+                }
+            }
+        }
+
+        .Right_Screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .Pokemon_BG {
+                // background-color: red;
+                height: 100px;
+
+                img {
+                    align-self: center;
+                    width: 200px;
+                    height: 200px;
+                }
+
+                .Types {
+                    display: flex;
+                    justify-content: center;
+                    gap: 70px;
+                    margin-bottom: 30px;
+
+                    span {
+                        padding: 5px 10px;
+                        border-radius: 12.5px;
+                        border: 1px solid #000;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+
 
 
             li {
-                font-size: 1.5rem;
-                margin: 5px 0;
-                display: flex;
-                flex-direction: column;
-
-                p {
-                    display: inline;
-                }
-
-                div {
-                    transition: all 0.5s;
-                    height: 25px;
-                    background-color: royalblue;
-
-
-                }
 
                 img {
                     width: 100px;
@@ -62,6 +105,25 @@
                     // margin: 0px 50px;
                 }
             }
+
+
+        }
+
+        @include mobile {
+            width: 100vw;
+            height: 1000px;
+        }
+
+
+
+        .lis {
+            display: flex;
+            gap: 30px;
+
+            @include mobile {
+                flex-direction: column;
+            }
+
         }
     }
 }
