@@ -12,7 +12,10 @@ function StatsScreen() {
     return (
         <div className={styles.Main_Screen}>
             {!loading &&
-                evolutionChain[index].chain.evolves_to[0].species.name !== stats[index].name ? evolutionChain[index].chain.evolves_to[0].species.name : 's'}
+                <div>
+                    {evolutionChain[index].chain.evolves_to[0].species.name}
+                    <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${stats[index].id + 1}.png`} alt="" />
+                </div>}
         </div>
     )
 }

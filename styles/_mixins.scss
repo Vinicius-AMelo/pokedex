@@ -65,11 +65,11 @@
     }
 }
 
-@mixin snorlax {
-    background-color: $snorlax--color;
+@mixin rattata {
+    background-color: $rattata--color;
 
     &:hover {
-        background-color: adjust-color($color: $snorlax--color, $lightness: -5);
+        background-color: adjust-color($color: $rattata--color, $lightness: -5);
     }
 }
 
