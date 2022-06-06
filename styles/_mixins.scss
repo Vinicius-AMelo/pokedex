@@ -80,3 +80,9 @@
         background-color: adjust-color($color: $psyduck--color, $lightness: -5);
     }
 }
+
+@mixin mobile {
+    @media (max-width: 425px) {
+        @content
+    }
+}
