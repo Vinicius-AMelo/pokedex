@@ -6,7 +6,9 @@ import { AppContext } from '../data/api/Store'
 function StatsScreen() {
 
     const { stats, loading, index, evolutionChain } = useContext(AppContext)
-    console.log(stats[index])
+    console.log(evolutionChain[index])
+
+
 
 
     return (
@@ -14,7 +16,6 @@ function StatsScreen() {
             {!loading && <div className={styles.Main_Screen}>
                 <h1>
                     {stats[index].name}
-
                 </h1>
                 <img
                     src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${stats[index].id}.png`}
@@ -36,7 +37,9 @@ function StatsScreen() {
                                 {`Habilidade ${index + 1}:`} {ab.ability.name}
                             </li>
                         )}
-                        <li style={{ marginTop: '30px' }}>Evolui para: {evolutionChain[index].chain.evolves_to[0].species.name}</li>
+                        <li style={{ marginTop: '30px' }}>Evolui para: {evolutionChain[index].chain.evolves_to[0].species.name === stats[index].name ? evolutionChain[index].chain.evolves_to[0].evolves_to[0].species.name : evolutionChain[index].chain.evolves_to[0].species.name}
+                            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${stats[index].id + 1}.png`} alt="" />
+                        </li>
                     </ul>
                 </div>
             </div>}

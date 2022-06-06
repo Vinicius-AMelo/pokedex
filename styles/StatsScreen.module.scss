@@ -14,6 +14,7 @@
 
     @include mobile {
         width: 100vw;
+        height: 1000px;
     }
 
     img {
@@ -39,21 +40,24 @@
 
             li {
                 font-size: 1.5rem;
+                margin: 5px 0;
 
                 p {
                     display: inline;
                 }
 
                 div {
-
                     transition: all 0.5s;
                     height: 25px;
                     background-color: royalblue;
 
-                    @include mobile {
-                        height: 15px;
-                    }
 
+                }
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                    margin: 0px 50px;
                 }
             }
         }
