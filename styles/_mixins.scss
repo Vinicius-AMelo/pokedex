@@ -1,0 +1,82 @@
+@import 'variables';
+
+@mixin bulbasaur {
+    background-color: $bulbasaur--color;
+
+    &:hover {
+        background-color: adjust-color($color: $bulbasaur--color, $lightness: -5);
+    }
+}
+
+@mixin charmander {
+    background-color: $charmander--color;
+
+    &:hover {
+        background-color: adjust-color($color: $charmander--color, $lightness: -5);
+    }
+}
+
+@mixin squirtle {
+    background-color: $squirtle--color;
+
+    &:hover {
+        background-color: adjust-color($color: $squirtle--color, $lightness: -5);
+    }
+}
+
+@mixin caterpie {
+    background-color: $caterpie--color;
+
+    &:hover {
+        background-color: adjust-color($color: $caterpie--color, $lightness: -5);
+    }
+}
+
+@mixin pidgey {
+    background-color: $pidgey--color;
+
+    &:hover {
+        background-color: adjust-color($color: $pidgey--color, $lightness: -5);
+    }
+}
+
+@mixin jigglypuff {
+    background-color: $jigglypuff--color;
+
+    &:hover {
+        background-color: adjust-color($color: $jigglypuff--color, $lightness: -5);
+    }
+}
+
+@mixin pikachu {
+    background-color: $pikachu--color;
+
+    &:hover {
+        background-color: adjust-color($color: $pikachu--color, $lightness: -5);
+    }
+}
+
+@mixin meowth {
+    background-color: $meowth--color;
+
+
+    &:hover {
+        background-color: adjust-color($color: $meowth--color, $lightness: -5);
+    }
+}
+
+@mixin snorlax {
+    background-color: $snorlax--color;
+
+    &:hover {
+        background-color: adjust-color($color: $snorlax--color, $lightness: -5);
+    }
+}
+
+@mixin psyduck {
+    background-color: $psyduck--color;
+
+    &:hover {
+        background-color: adjust-color($color: $psyduck--color, $lightness: -5);
+    }
+}

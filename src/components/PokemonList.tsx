@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { AppContext } from '../data/api/Store'
 
-import * as styles from '../../styles/PokemonList.module.scss'
+import styles from '../../styles/PokemonList.module.scss'
 
 
 function PokemonList() {
@@ -9,15 +9,18 @@ function PokemonList() {
     const { stats, evolutionChain, loading } = useContext(AppContext)
 
     return (
-        <div className='Main_List'>
-            {!loading && <ul>
-                {stats.map((pokemon, index) => (
-                    <li key={index} >
-                        {` ${evolutionChain[index].id} ${pokemon.name}`}
-                    </li>
-                ))}
-            </ul>}
-        </div>
+        <div className={styles.Main_List}>
+            <div className={styles.List}>
+                {!loading && <ul>
+                    {stats.map((pokemon, index) => (
+                        <li key={index} className={styles[pokemon.name]}>
+                            <img src={pokemon.sprites.front_default} alt="" />
+                            {pokemon.name}
+                        </li>
+                    ))}
+                </ul>}
+            </div>
+        </div >
     )
 }
 

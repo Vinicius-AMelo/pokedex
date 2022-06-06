@@ -19,7 +19,7 @@ function Store(props: any) {
     useEffect(() => {
         const pokemonEvolutionChain: any[] = []
         const pokemonStats: any[] = []
-        const listOfPokemons = ['pikachu', 'charmander']
+        const listOfPokemons = ['bulbasaur', 'charmander', 'squirtle', 'caterpie', 'pidgey', 'jigglypuff', 'pikachu', 'meowth', 'snorlax', 'psyduck']
 
         listOfPokemons.map(eachPokemon => (
             fetch(`https://pokeapi.co/api/v2/pokemon/${eachPokemon}/`)
