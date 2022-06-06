@@ -12,10 +12,12 @@ function StatsScreen() {
     return (
         <>
             {!loading && <div className={styles.Main_Screen}>
-                <div>
+                <p>
                     {evolutionChain[index].chain.evolves_to[0].species.name}
-                    <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${stats[index].id + 1}.png`} alt="" />
-                </div>
+                </p>
+                <img
+                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${stats[index].id + 1}.png`}
+                    alt="Forma Evoluída do Pokemon" />
             </div>}
         </>
 
