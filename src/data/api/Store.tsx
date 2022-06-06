@@ -1,19 +1,15 @@
 import { createContext, useEffect, useState } from "react"
 
 
-interface IContext {
-    stats: any[],
-    evolutionChain: any[],
-    loading: boolean
-}
 
-export const AppContext = createContext<IContext>({ stats: [], evolutionChain: [], loading: true })
+export const AppContext = createContext<any>(null)
 
 function Store(props: any) {
 
     const [stats, setStats] = useState<any[]>([])
     const [evolutionChain, setEvolutionChain] = useState<any[]>([])
     const [loading, setLoading] = useState<boolean>(true)
+    const [index, setIndex] = useState<number>(0)
 
 
     useEffect(() => {
@@ -34,10 +30,10 @@ function Store(props: any) {
                         }, 10)))))))
     }, [])
 
-    console.log(stats)
-    console.log(evolutionChain)
+    // console.log(stats)
+    // console.log(evolutionChain)
     return (
-        <AppContext.Provider value={{ stats, evolutionChain, loading }}>
+        <AppContext.Provider value={{ stats, evolutionChain, loading, index, setIndex }}>
             {props.children}
         </AppContext.Provider>
     )
