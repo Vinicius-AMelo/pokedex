@@ -49,11 +49,12 @@ function StatsScreen() {
                                     </ul>
                                 </div>
                                 <ul>
-                                    <li style={{ marginTop: '30px' }}><p>Evolui para: {evolutionChain[index].chain.evolves_to[0].species.name === stats[index].name ? evolutionChain[index].chain.evolves_to[0].evolves_to[0].species.name : evolutionChain[index].chain.evolves_to[0].species.name}</p>
-                                        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${stats[index].id + 1}.png`} alt="" />
+                                    <li><p>Evolui para: {evolutionChain[index].chain.evolves_to[0].species.name === stats[index].name ? evolutionChain[index].chain.evolves_to[0].evolves_to[0].species.name : evolutionChain[index].chain.evolves_to[0].species.name}</p>
+                                        <div className={styles.Evolve}>
+                                            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${stats[index].id + 1}.png`} alt="" />
+                                        </div>
                                     </li>
                                 </ul>
-
                             </div>
                         </div>
                     </div>
