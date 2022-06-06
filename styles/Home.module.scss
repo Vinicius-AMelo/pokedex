@@ -10,5 +10,6 @@
     @include mobile {
         flex-direction: column;
         padding: 0 250px;
+        height: fit-content;
     }
 }

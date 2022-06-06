@@ -7,16 +7,14 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'VT323', monospace;
-  font-size: 1.2rem;
   text-transform: uppercase;
 }
 
 body {
   background-image: url('../src/images/bg-image.jpg');
-  background-repeat: no-repeat;
-  background-size: 100vw;
+  background-size: 100vmax;
 
   @include mobile {
-    background-image: none;
+    background-image: linear-gradient(to right, green, purple);
   }
 }

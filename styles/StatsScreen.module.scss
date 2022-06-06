@@ -1,33 +1,60 @@
+@import 'mixins';
+
 .Main_Screen {
     background-color: #20202080;
     color: #fff;
     width: 600px;
     height: 600px;
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
     margin: 20px;
     padding: 0 20px;
 
+    @include mobile {
+        width: 100vw;
+    }
+
     img {
+        align-self: center;
         width: 200px;
         height: 200px;
         margin-bottom: 20px;
     }
 
-    ul {
-        align-self: flex-start;
-        width: 250px;
+    .lis {
+        display: flex;
+        gap: 30px;
 
-        li {
+        @include mobile {
+            flex-direction: column;
+        }
 
 
-            div {
-                transition: all 0.5s;
-                height: 10px;
-                background-color: rgb(172, 31, 253);
+        ul {
+            width: 250px;
+            list-style: none;
 
+
+            li {
+                font-size: 1.5rem;
+
+                p {
+                    display: inline;
+                }
+
+                div {
+
+                    transition: all 0.5s;
+                    height: 25px;
+                    background-color: royalblue;
+
+                    @include mobile {
+                        height: 15px;
+                    }
+
+                }
             }
         }
     }
