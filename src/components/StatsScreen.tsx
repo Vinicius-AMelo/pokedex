@@ -6,7 +6,7 @@ import { AppContext } from '../data/api/Store'
 function StatsScreen() {
 
     const { stats, loading, index, evolutionChain } = useContext(AppContext)
-    console.log(stats[index])
+    // console.log(stats[index])
 
 
     return (

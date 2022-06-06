@@ -12,9 +12,9 @@ function Store(props: any) {
     const [index, setIndex] = useState<number>(0)
 
 
+    const pokemonEvolutionChain: any[] = []
+    const pokemonStats: any[] = []
     useEffect(() => {
-        const pokemonEvolutionChain: any[] = []
-        const pokemonStats: any[] = []
         const listOfPokemons = ['bulbasaur', 'charmander', 'squirtle', 'caterpie', 'pidgey', 'jigglypuff', 'pikachu', 'meowth', 'rattata', 'psyduck']
 
         listOfPokemons.map(eachPokemon => (
@@ -30,7 +30,7 @@ function Store(props: any) {
                         }, 10)))))))
     }, [])
 
-    // console.log(stats)
+    // console.log(pokemonStats)
     // console.log(evolutionChain)
     return (
         <AppContext.Provider value={{ stats, evolutionChain, loading, index, setIndex }}>
