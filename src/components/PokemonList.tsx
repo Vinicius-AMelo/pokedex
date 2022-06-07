@@ -6,21 +6,27 @@ import styles from '../../styles/PokemonList.module.scss'
 
 function PokemonList() {
 
-    const { stats, loading, setIndex } = useContext(AppContext)
+    const { stats, loading, setIndex, active } = useContext(AppContext)
+
+
+    //Lógica pra não iniciar a animação automáticamente
+    const isActive = active === 'hidden' ? 'hidden' : active === 'show' ? 'show' : ''
 
     return (
-        <div className={styles.Main_List}>
-            <div className={styles.List}>
-                {!loading && <ul>
-                    {stats.map((pokemon: any, index: number) => (
-                        <li key={index} className={styles[pokemon.name]} onClick={e => setIndex(index)}>
-                            <img src={pokemon.sprites.front_default} alt="" />
-                            {pokemon.name}
-                        </li>
-                    ))}
-                </ul>}
-            </div>
-        </div >
+        <div className={styles.a}>
+            {!loading && <article className={styles[isActive]}>
+                <div className={styles.List}>
+                    <ul>
+                        {stats.map((pokemon: any, index: number) => (
+                            <li key={index} className={styles[pokemon.name]} onClick={e => setIndex(index)}>
+                                <img src={pokemon.sprites.front_default} alt="" />
+                                {pokemon.name}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </article>}
+        </div>
     )
 }
 

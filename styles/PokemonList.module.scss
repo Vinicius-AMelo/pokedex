@@ -1,75 +1,121 @@
 @import 'mixins';
 
-.Main_List {
+.a {
+    article {
 
-    display: flex;
-    align-items: center;
-    background-color: #8B0100;
-    padding: 10px;
-    box-shadow: 0px 0px 0 10px #600405;
-    border-radius: 0 0 25% 0;
-    width: 500px;
-    height: 500px;
-
-    ul {
         display: flex;
-        flex-wrap: wrap;
-        height: 400px;
-        gap: 10px;
-        width: 450px;
+        align-items: center;
+        background-color: #8B0100;
+        padding: 10px;
+        box-shadow: 0px 0px 0 10px #600405;
+        border-radius: 0 0 25% 0;
+        width: 500px;
+        height: 500px;
 
-        li {
-            font-size: 1.2rem;
+
+        transform: translateX(-550px);
+
+        z-index: 0;
+
+        &.show {
+
+            animation: show 1s ease-in-out;
+            transform: translateX(0px);
+
+            @keyframes show {
+                from {
+
+                    transform: translateX(-550px);
+                }
+
+                to {
+                    transform: translateX(0px);
+                }
+
+            }
+        }
+
+        &.hidden {
+            animation: hide 1s ease-in-out;
+            transform: translateX(-550px);
+
+            z-index: 0;
+
+            @keyframes hide {
+                from {
+
+                    transform: translateX(0px);
+                }
+
+                to {
+                    transform: translateX(-550px);
+
+                }
+            }
+        }
+
+        ul {
             display: flex;
-            align-items: center;
-            list-style: none;
-            height: 60px;
-            width: 220px;
-            padding: 0 10px;
-            border-radius: 30px;
-            cursor: pointer;
+            flex-wrap: wrap;
+            height: 400px;
+            gap: 10px;
+            width: 450px;
+
+            li {
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                list-style: none;
+                height: 60px;
+                width: 220px;
+                padding: 0 10px;
+                border-radius: 30px;
+                cursor: pointer;
 
 
-            &.bulbasaur {
-                @include bulbasaur
+                &.bulbasaur {
+                    @include bulbasaur
+                }
+
+                &.charmander {
+                    @include charmander
+                }
+
+                &.squirtle {
+                    @include squirtle
+                }
+
+                &.caterpie {
+                    @include caterpie
+                }
+
+                &.pidgey {
+                    @include pidgey
+                }
+
+                &.jigglypuff {
+                    @include jigglypuff
+                }
+
+                &.pikachu {
+                    @include pikachu
+                }
+
+                &.meowth {
+                    @include meowth
+                }
+
+                &.rattata {
+                    @include rattata
+                }
+
+                &.psyduck {
+                    @include psyduck
+                }
+
             }
-
-            &.charmander {
-                @include charmander
-            }
-
-            &.squirtle {
-                @include squirtle
-            }
-
-            &.caterpie {
-                @include caterpie
-            }
-
-            &.pidgey {
-                @include pidgey
-            }
-
-            &.jigglypuff {
-                @include jigglypuff
-            }
-
-            &.pikachu {
-                @include pikachu
-            }
-
-            &.meowth {
-                @include meowth
-            }
-
-            &.rattata {
-                @include rattata
-            }
-
-            &.psyduck {
-                @include psyduck
-            }
-
         }
     }
+
+
 }

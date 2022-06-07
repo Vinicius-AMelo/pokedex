@@ -10,6 +10,8 @@ function Store(props: any) {
     const [evolutionChain, setEvolutionChain] = useState<any[]>([])
     const [loading, setLoading] = useState<boolean>(true)
     const [index, setIndex] = useState<number>(0)
+    const [active, setActive] = useState<any>()
+    const [screen, setScreen] = useState<any>()
 
     useEffect(() => {
         const pokemonEvolutionChain: any[] = []
@@ -121,7 +123,7 @@ function Store(props: any) {
 
 
     return (
-        <AppContext.Provider value={{ stats, evolutionChain, loading, index, setIndex }}>
+        <AppContext.Provider value={{ stats, evolutionChain, loading, index, setIndex, active, setActive, screen, setScreen }}>
             {props.children}
         </AppContext.Provider>
     )
