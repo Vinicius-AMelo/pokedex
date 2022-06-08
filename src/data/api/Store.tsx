@@ -16,7 +16,7 @@ function Store(props: any) {
     useEffect(() => {
         const pokemonEvolutionChain: any[] = []
         const pokemonStats: any[] = []
-        const listOfPokemons = ['bulbasaur', 'squirtle', 'charmander', 'pikachu', 'caterpie', 'pidgey', 'jigglypuff', 'meowth', 'rattata', 'psyduck']
+        const listOfPokemons = ['bulbasaur', 'squirtle', 'charmander', 'pikachu', 'diglett', 'pidgey', 'jigglypuff', 'meowth', 'rattata', 'psyduck']
 
         // A função listOfPokemons.map deixa a lista sempre desordenada com indexes incorretos, por isso optei por colocar o index manualmente no fetch, acho que é um tempo curto pra tantas requisições do servidor
 

@@ -1,5 +1,15 @@
 @import 'variables';
 
+
+@mixin mobile {
+    @media (max-width: 425px) {
+        @content
+    }
+}
+
+;
+
+
 @mixin bulbasaur {
     background-color: $bulbasaur--color;
     box-shadow: 5px 5px adjust-color($bulbasaur--color, $lightness: -15%);
@@ -43,12 +53,12 @@
     }
 }
 
-@mixin caterpie {
-    background-color: $caterpie--color;
-    box-shadow: 5px 5px adjust-color($caterpie--color, $lightness: -15%);
+@mixin diglett {
+    background-color: $diglett--color;
+    box-shadow: 5px 5px adjust-color($diglett--color, $lightness: -15%);
 
     &:hover {
-        background-color: adjust-color($color: $caterpie--color, $lightness: -5);
+        background-color: adjust-color($color: $diglett--color, $lightness: -5);
     }
 
     &:active {
@@ -138,11 +148,5 @@
     &:active {
         transform: translate(5px, 5px);
         box-shadow: none;
-    }
-}
-
-@mixin mobile {
-    @media (max-width: 425px) {
-        @content
     }
 }

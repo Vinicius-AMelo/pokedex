@@ -11,7 +11,6 @@ function StatsScreen() {
 
 
     const isOn = screen === 'off' ? 'off' : screen === 'on' ? 'on' : ''
-    console.log(screen)
     return (
         <>
             {!loading &&
