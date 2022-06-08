@@ -1,6 +1,5 @@
 @import 'variables';
 
-
 @mixin mobile {
     @media (max-width: 425px) {
         @content
@@ -9,14 +8,12 @@
 
 ;
 
-
-@mixin bulbasaur {
-    background-color: $bulbasaur--color;
-    box-shadow: 5px 5px adjust-color($bulbasaur--color, $lightness: -15%);
+@mixin ola($color) {
+    background-color: $color;
+    box-shadow: 5px 5px adjust-color($color, $lightness: -15%);
 
     &:hover {
-        background-color: adjust-color($color: $bulbasaur--color, $lightness: -5);
-
+        background-color: adjust-color($color: $color, $lightness: -5%);
     }
 
     &:active {
@@ -25,128 +22,4 @@
     }
 }
 
-@mixin charmander {
-    background-color: $charmander--color;
-    box-shadow: 5px 5px adjust-color($charmander--color, $lightness: -15%);
-
-    &:hover {
-        background-color: adjust-color($color: $charmander--color, $lightness: -5);
-    }
-
-    &:active {
-        transform: translate(5px, 5px);
-        box-shadow: none;
-    }
-}
-
-@mixin squirtle {
-    background-color: $squirtle--color;
-    box-shadow: 5px 5px adjust-color($squirtle--color, $lightness: -15%);
-
-    &:hover {
-        background-color: adjust-color($color: $squirtle--color, $lightness: -5);
-    }
-
-    &:active {
-        transform: translate(5px, 5px);
-        box-shadow: none;
-    }
-}
-
-@mixin diglett {
-    background-color: $diglett--color;
-    box-shadow: 5px 5px adjust-color($diglett--color, $lightness: -15%);
-
-    &:hover {
-        background-color: adjust-color($color: $diglett--color, $lightness: -5);
-    }
-
-    &:active {
-        transform: translate(5px, 5px);
-        box-shadow: none;
-    }
-}
-
-@mixin pidgey {
-    background-color: $pidgey--color;
-    box-shadow: 5px 5px adjust-color($pidgey--color, $lightness: -15%);
-
-    &:hover {
-        background-color: adjust-color($color: $pidgey--color, $lightness: -5);
-    }
-
-    &:active {
-        transform: translate(5px, 5px);
-        box-shadow: none;
-    }
-}
-
-@mixin jigglypuff {
-    background-color: $jigglypuff--color;
-    box-shadow: 5px 5px adjust-color($jigglypuff--color, $lightness: -15%);
-
-    &:hover {
-        background-color: adjust-color($color: $jigglypuff--color, $lightness: -5);
-    }
-
-    &:active {
-        transform: translate(5px, 5px);
-        box-shadow: none;
-    }
-}
-
-@mixin pikachu {
-    background-color: $pikachu--color;
-    box-shadow: 5px 5px adjust-color($pikachu--color, $lightness: -15%);
-
-    &:hover {
-        background-color: adjust-color($color: $pikachu--color, $lightness: -5);
-    }
-
-    &:active {
-        transform: translate(5px, 5px);
-        box-shadow: none;
-    }
-}
-
-@mixin meowth {
-    background-color: $meowth--color;
-    box-shadow: 5px 5px adjust-color($meowth--color, $lightness: -15%);
-
-    &:hover {
-        background-color: adjust-color($color: $meowth--color, $lightness: -5);
-    }
-
-    &:active {
-        transform: translate(5px, 5px);
-        box-shadow: none;
-    }
-}
-
-@mixin rattata {
-    background-color: $rattata--color;
-    box-shadow: 5px 5px adjust-color($rattata--color, $lightness: -15%);
-
-    &:hover {
-        background-color: adjust-color($color: $rattata--color, $lightness: -5);
-    }
-
-    &:active {
-        transform: translate(5px, 5px);
-        box-shadow: none;
-    }
-}
-
-@mixin psyduck {
-    background-color: $psyduck--color;
-    box-shadow: 5px 5px adjust-color($psyduck--color, $lightness: -15%);
-
-    &:hover {
-        background-color: adjust-color($color: $psyduck--color, $lightness: -5);
-    }
-
-    &:active {
-        transform: translate(5px, 5px);
-        box-shadow: none;
-    }
-}
+;

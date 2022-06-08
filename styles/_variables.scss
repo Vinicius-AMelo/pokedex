@@ -1,10 +1,12 @@
-$bulbasaur--color: #65A927;
-$charmander--color: #FFAD52;
-$squirtle--color: #57979F;
-$diglett--color: #975721;
-$pidgey--color: #C9B48D;
-$jigglypuff--color: #ECA9B3;
-$pikachu--color: #F2D047;
-$meowth--color: #E8B06A;
-$rattata--color: #286F8B;
-$psyduck--color: #F4CD4A;
+$pokemons: (
+    'bulbasaur': #65A927,
+    'charmander': #FFAD52,
+    'squirtle': #57979F,
+    'diglett': #975721,
+    'pidgey': #C9B48D,
+    'jigglypuff': #ECA9B3,
+    'pikachu': #F2D047,
+    'meowth': #E8B06A,
+    'rattata': #286F8B,
+    'psyduck': #F4CD4A,
+);
