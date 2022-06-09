@@ -10,6 +10,8 @@
     @include mobile {
         flex-direction: column;
         // padding: 0 250px;
-        height: fit-content;
+        height: max-content;
+        width: 100vw;
+        gap: 25px;
     }
 }

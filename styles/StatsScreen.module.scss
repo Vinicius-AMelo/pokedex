@@ -1,27 +1,44 @@
+@import 'variables';
 @import 'mixins';
-
 
 .Main_Screen {
     background-color: #C00D0E;
     box-shadow: 10px 10px 0 10px #600405;
     border: 3px solid #000;
 
-    width: 750px;
-    height: 550px;
-    padding: 50px 0px 50px 50px;
+    width: $width-pokedex;
+    height: $height-pokedex ;
+    padding: $padding-pokedex;
+    padding-right: 0;
 
     display: flex;
     justify-content: space-between;
     z-index: 1;
 
+    @include mobile {
+        width: $width-pokedex-mobile;
+        height: $height-pokedex-mobile;
+        padding: 32.5px;
+        padding-bottom: 10px;
+        flex-direction: column;
+        margin-top: 10px;
+        box-shadow: 0px 20px #600405;
+    }
+
+
     article {
-        width: 550px;
-        height: 450px;
+        width: $width-screen;
+        height: $height-screen;
         background-color: #202020;
         position: absolute;
         border-radius: 10px;
         border: 5px solid #B0B0B0;
         z-index: 3;
+
+        @include mobile {
+            width: $width-screen-mobile;
+            height: $height-screen-mobile;
+        }
 
         &.on {
             opacity: 0;
@@ -65,26 +82,37 @@
         border: 5px solid #B0B0B0;
         border-radius: 10px;
 
-        width: 550px;
-        height: 450px;
+        width: $width-screen;
+        height: $height-screen;
         padding: 10px;
 
         display: flex;
         justify-content: space-between;
 
-        li {
-            font-size: 1.2rem;
-            display: flex;
+        @include mobile {
+            width: $width-screen-mobile;
+            height: $height-screen-mobile;
             flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0;
         }
+
+
 
         .Left_Screen {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
 
+            width: $width-itens;
+
+            @include mobile {
+                width: $width-itens-mobile;
+                gap: 10px;
+            }
+
             ul {
-                width: 250px;
                 list-style: none;
                 border-radius: 10px;
                 background-color: #24272E;
@@ -98,7 +126,10 @@
                         height: 20px;
                         background-color: royalblue;
                         border-radius: 5px;
-                        padding: 0 4px;
+
+                        @include mobile {
+                            height: 10px;
+                        }
 
                     }
 
@@ -108,35 +139,61 @@
         }
 
         .Right_Screen {
-            width: 210px;
+            width: $width-itens;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            align-items: center;
+
+            @include mobile {
+                height: 420px;
+                width: $width-itens-mobile;
+                // justify-content: space-between;
+            }
 
             .Pokemon_BG {
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
 
                 img {
                     width: 150px;
                     height: 150px;
-                    margin: 0 50%;
-                    transform: translateX(-50%);
+                    // margin: 0 50%;
+                    // transform: translateX(-50%);
+
+                    @include mobile {
+                        width: 100px;
+                        height: 100px;
+                    }
+
                 }
 
                 .Types {
                     display: flex;
                     justify-content: space-evenly;
 
+                    @include mobile {
+                        gap: 10px;
+                        display: none;
+                    }
+
                     span {
                         margin: 10px 0;
                         padding: 5px 10px;
                         border-radius: 15px;
                         border: 1px solid #000;
+
+
                     }
                 }
             }
 
 
             li {
+                list-style: none;
 
                 img {
                     width: 75px;
@@ -149,22 +206,6 @@
 
         }
 
-        @include mobile {
-            width: 100vw;
-            height: 1000px;
-        }
-
-
-
-        .lis {
-            display: flex;
-            gap: 30px;
-
-            @include mobile {
-                flex-direction: column;
-            }
-
-        }
     }
 
     .Buttons {
@@ -174,6 +215,11 @@
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
+
+        @include mobile {
+            width: $width-screen-mobile;
+            flex-direction: row;
+        }
 
 
         $button--color: #51AE60;

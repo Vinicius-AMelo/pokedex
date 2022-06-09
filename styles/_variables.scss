@@ -10,3 +10,16 @@ $pokemons: (
     'rattata': #286F8B,
     'psyduck': #F4CD4A,
 );
+
+$width-pokedex: 750px;
+$width-screen: calc($width-pokedex - 200px);
+$width-itens: calc($width-screen / 2.2);
+$padding-pokedex: calc(($width-pokedex - $width-screen) / 4);
+$height-pokedex: 550px;
+$height-screen: calc($height-pokedex - 100px);
+
+$width-pokedex-mobile: 360px;
+$width-screen-mobile: calc($width-pokedex-mobile - 70px);
+$width-itens-mobile: calc($width-screen-mobile - 30px);
+$height-pokedex-mobile: 630px;
+$height-screen-mobile: calc($height-pokedex-mobile - 130px);

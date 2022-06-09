@@ -24,9 +24,9 @@ function StatsScreen() {
                             <ul>
                                 {stats[index].stats.map((stat: any, index: number) =>
                                     <li key={index}>
-                                        {stat.stat.name}
+                                        {`${stat.stat.name}: ${stat.base_stat}`}
                                         <div style={{ width: `${stat.base_stat <= 100 ? stat.base_stat : 100}%` }}>
-                                            <p>{stat.base_stat}</p>
+
                                         </div>
                                     </li>
                                 )}

@@ -12,9 +12,9 @@
 
 body {
   background-image: url('../src/images/bg-image2.png');
-  // background-size: 100vmax;
+  background-size: 100vmax;
 
   @include mobile {
-    background-image: linear-gradient(to right, green, purple);
+    background-image: linear-gradient(to right, green, yellow);
   }
 }

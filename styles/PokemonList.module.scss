@@ -4,8 +4,7 @@
     article {
         background-color: #8B0100;
         box-shadow: 0px 0px 0 10px #600405;
-        border-radius: 0 0 25% 0;
-
+        border-radius: 0 0 25% 0%;
         display: flex;
         align-items: center;
 
@@ -15,6 +14,15 @@
 
         transform: translateX(-550px);
         z-index: 0;
+
+        @include mobile {
+            width: 330px;
+            height: 500px;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 0 0 15% 15%;
+            margin-bottom: 50px;
+        }
 
         &.show {
 
@@ -56,9 +64,15 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-
             height: 400px;
-            width: 450px;
+            width: 455px;
+
+            @include mobile {
+                // background-color: aliceblue;
+                height: 500px;
+                width: 320px;
+                flex-direction: column;
+            }
 
             li {
                 border-radius: 30px;
@@ -77,7 +91,20 @@
                 @each $pokemon,
                 $color in $pokemons {
                     &.#{$pokemon} {
-                        @include ola($color);
+                        @include pokemon($color);
+                    }
+                }
+
+
+                @include mobile {
+                    height: 80px;
+                    width: 130px;
+                    flex-direction: column;
+                }
+
+                img {
+                    @include mobile {
+                        height: 50px;
                     }
                 }
             }
