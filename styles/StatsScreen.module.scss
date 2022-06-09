@@ -42,7 +42,7 @@
 
         &.on {
             opacity: 0;
-            animation: turnOn 2s ease-in;
+            animation: turnOn 1.5s ease-in;
 
             @keyframes turnOn {
 
@@ -58,7 +58,7 @@
 
         &.off {
             opacity: 1;
-            animation: turnoff 2s ease-out;
+            animation: turnoff 1.5s ease-out;
 
             @keyframes turnoff {
 
@@ -113,9 +113,17 @@
             }
 
             ul {
+
                 list-style: none;
                 border-radius: 10px;
                 background-color: #24272E;
+
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    height: 100px;
+                }
 
                 li {
                     color: #fff;
@@ -128,7 +136,7 @@
                         border-radius: 5px;
 
                         @include mobile {
-                            height: 10px;
+                            height: 5px;
                         }
 
                     }

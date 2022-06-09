@@ -22,6 +22,7 @@
             justify-content: space-between;
             border-radius: 0 0 15% 15%;
             margin-bottom: 50px;
+            transform: translateY(-550px);
         }
 
         &.show {
@@ -40,6 +41,23 @@
                 }
 
             }
+
+            @include mobile {
+                animation: show 1s ease-in-out;
+                transform: translateY(0px);
+
+                @keyframes show {
+                    from {
+
+                        transform: translateY(-550px);
+                    }
+
+                    to {
+                        transform: translateY(0px);
+                    }
+
+                }
+            }
         }
 
         &.hidden {
@@ -56,6 +74,23 @@
                 to {
                     transform: translateX(-550px);
 
+                }
+            }
+
+            @include mobile {
+                animation: hide 1s ease-in-out;
+                transform: translateY(-550px);
+
+                @keyframes hide {
+                    from {
+
+                        transform: translateY(0px);
+                    }
+
+                    to {
+                        transform: translateY(-550px);
+
+                    }
                 }
             }
         }
