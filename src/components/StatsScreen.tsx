@@ -14,10 +14,10 @@ function StatsScreen() {
     return (
         <>
             {!loading &&
-                <div className={styles.Main_Screen}>
-                    <article className={styles[isOn]}></article>
+                <main className={styles.Main_Screen}>
+                    <figure className={styles[isOn]}></figure>
                     <div className={styles.Screen}>
-                        <div className={styles.Left_Screen}>
+                        <section className={styles.Left_Screen}>
                             <h1>
                                 {stats[index].name}
                             </h1>
@@ -31,8 +31,8 @@ function StatsScreen() {
                                     </li>
                                 )}
                             </ul>
-                        </div>
-                        <div className={styles.Right_Screen}>
+                        </section>
+                        <section className={styles.Right_Screen}>
                             <div className={styles.Pokemon_BG}>
                                 <img
                                     src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${stats[index].id}.png`}
@@ -55,13 +55,13 @@ function StatsScreen() {
                                     </div>
                                 </li>
                             </ul>
-                        </div>
+                        </section>
                     </div>
-                    <div className={styles.Buttons}>
+                    <nav className={styles.Buttons}>
                         <AiFillCaretRight className={styles.TurnOn} onClick={() => setActive(active !== 'show' ? 'show' : 'hidden')} />
                         <AiOutlinePoweroff className={styles.TurnOff} onClick={() => setScreen(screen !== 'on' ? 'on' : 'off')} />
-                    </div>
-                </div>}
+                    </nav>
+                </main>}
         </>
 
     )

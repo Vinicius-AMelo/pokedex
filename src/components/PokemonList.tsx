@@ -13,8 +13,8 @@ function PokemonList() {
     const isActive = active === 'hidden' ? 'hidden' : active === 'show' ? 'show' : ''
 
     return (
-        <div className={styles.a}>
-            {!loading && <article className={styles[isActive]}>
+        <div className={styles.Menu}>
+            {!loading && <nav className={styles[isActive]}>
                 <div className={styles.List}>
                     <ul>
                         {stats.map((pokemon: any, index: number) => (
@@ -25,7 +25,7 @@ function PokemonList() {
                         ))}
                     </ul>
                 </div>
-            </article>}
+            </nav>}
         </div>
     )
 }
