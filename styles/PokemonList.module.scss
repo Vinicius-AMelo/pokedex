@@ -117,7 +117,7 @@
                 list-style: none;
 
                 height: 60px;
-                font-size: 1.2rem;
+                font-size: 1.5rem;
                 width: 220px;
                 padding: 0 10px;
 
@@ -126,6 +126,10 @@
                 @each $pokemon,
                 $color in $pokemons {
                     &.#{$pokemon} {
+                        @include mobile {
+                            font-size: 1.2rem;
+                        }
+
                         @include pokemon($color);
                     }
                 }
